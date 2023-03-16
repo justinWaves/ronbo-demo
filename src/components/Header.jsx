@@ -18,7 +18,7 @@ function Header() {
     };
     
   return (
-    <>
+  
       <div className=" group flex flex-col ">
         <div
           className=" flex justify-between group-hover:bg-white transition-colors duration-500
@@ -71,7 +71,7 @@ function Header() {
             <div className="flex">
             <KeyboardArrowDownIcon  className="pb-2  transition-all duration-200 " /> <p className="hover:underline">CHOOSE YOUR SPACE</p> 
             </div>
-          <div className={` ${isMenuOpen ? "hidden ": "flex-row "} bg-white transition-all duration-100 absolute pl-8 pr-64  pb-8 pt-8`} onMouseLeave={handleHover}>
+          <div className={` ${isMenuOpen ? "hidden": "flex-row "} bg-white transition-all duration-100 absolute pl-8 pr-64  pb-8 pt-8`} onMouseLeave={handleHover}>
 <h1 className="cursor-pointer p-3 hover:underline">KITCHEN</h1>
 <h1 className="cursor-pointer p-3 hover:underline">BATH</h1>
 <h1 className="cursor-pointer p-3 hover:underline">BEDROOM</h1>
@@ -85,7 +85,7 @@ function Header() {
           <p className="cursor-pointer hover:underline">TRADE PROS</p> <p className="cursor-pointer hover:underline">FREE DESIGN CONSULTATION</p>
         </div>
       </div>
-    </>
+   
   );
 }
 
