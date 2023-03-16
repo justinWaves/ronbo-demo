@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
@@ -6,30 +6,31 @@ import CardGiftcardIcon from "@mui/icons-material/CardGiftcard";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
-const menuItems = [
-  "CHOOSE YOUR SPACE",
-  "INSPIRATION",
-  "SERVICES",
-  "TRADE PROS",
-  "SHOWROOMS",
-  "FREE DESIGN CONSULTATION",
-];
 
 function Header() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const handleHover = () => {
+        setIsMenuOpen(!isMenuOpen)
+    };
+    const handleClose = () => {
+   
+    };
+    
   return (
     <>
       <div className=" group flex flex-col ">
         <div
-          className=" flex justify-between group-hover:bg-white transition-colors duration-1000
+          className=" flex justify-between group-hover:bg-white transition-colors duration-500
       w-screen h-28  relative top-0 z-10 p-10"
         >
           <div>
             <MenuIcon
-              className="text-white group-hover:text-black cursor-pointer transition-all duration-1000
+              className="text-white group-hover:text-black cursor-pointer transition-all duration-500
         "
             />
             <SearchIcon
-              className="text-white group-hover:text-black  ml-8 cursor-pointer transition-all duration-1000
+              className="text-white group-hover:text-black  ml-8 cursor-pointer transition-all duration-500
         "
             />
           </div>
@@ -40,7 +41,7 @@ function Header() {
               id="body_1"
               width="72"
               height="12"
-              className="fill-white group-hover:fill-black bg-cover mx-auto transition-all duration-1000"
+              className="fill-white group-hover:fill-black bg-cover mx-auto transition-all duration-500"
             >
               <g transform="matrix(0.040201005 0 0 0.03986711 0 0)">
                 <path
@@ -53,21 +54,30 @@ function Header() {
           </div>
           <div>
             <PersonOutlineIcon
-              className="text-white group-hover:text-black mr-8 cursor-pointer transition-all duration-1000
+              className="text-white group-hover:text-black mr-8 cursor-pointer transition-all duration-500
         "
             />
             <CardGiftcardIcon
-              className="text-white group-hover:text-black  cursor-pointer transition-all duration-1000
+              className="text-white group-hover:text-black  cursor-pointer transition-all duration-500
         "
             />
           </div>
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex flex-row justify-around text-white group-hover:text-black z-10 text-xs group-hover:bg-white transition-all duration-1000 pb-2">
-          <div className="flex cursor-pointer">
-            <KeyboardArrowDownIcon  className="pb-2  transition-all duration-200 " /> <p className="hover:underline">CHOOSE YOUR SPACE</p>
+        <div className="hidden md:flex flex-row justify-around text-white group-hover:text-black z-10 text-xs  group-hover:bg-white transition-all duration-500 pb-2 font-light">
+            
+          <div   className="flex-row cursor-pointer"  onMouseEnter={handleHover}>
+            <div className="flex">
+            <KeyboardArrowDownIcon  className="pb-2  transition-all duration-200 " /> <p className="hover:underline">CHOOSE YOUR SPACE</p> 
+            </div>
+          <div className={` ${isMenuOpen ? "hidden ": "flex-row "} bg-white transition-all duration-100 absolute pl-8 pr-64  pb-8 pt-8`} onMouseLeave={handleHover}>
+<h1 className="cursor-pointer p-3 hover:underline">KITCHEN</h1>
+<h1 className="cursor-pointer p-3 hover:underline">BATH</h1>
+<h1 className="cursor-pointer p-3 hover:underline">BEDROOM</h1>
+            </div>
           </div>
+      
           <p className="cursor-pointer hover:underline">INSPIRATION</p> <p className="cursor-pointer hover:underline">SERVICES</p>
           <div className="flex  cursor-pointer">
             <LocationOnIcon   className="pb-2 transition-all duration-200 " /> <p className=" hover:underline" >SHOWROOMS</p>
