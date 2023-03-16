@@ -1,6 +1,6 @@
 {
   "name": "ronbo-demo",
-  "homepage": "https://justinwaves.github.io/ronbo-demo",
+
   "version": "0.1.0",
   "private": true,
   "dependencies": {
