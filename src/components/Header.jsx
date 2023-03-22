@@ -22,20 +22,20 @@ function Header() {
       <div className=" group flex flex-col ">
         <div
           className=" flex justify-between group-hover:bg-white transition-colors duration-500
-      w-screen h-28  relative top-0 z-10 p-10"
+      w-screen h-28  relative top-0 z-10 md:p-10 pt-5 "
         >
-          <div>
+          <div className="absolute left-3 md:relative">
             <MenuIcon
               className="text-white group-hover:text-black cursor-pointer transition-all duration-500
         "
             />
             <SearchIcon
-              className="text-white group-hover:text-black  ml-8 cursor-pointer transition-all duration-500
+              className="text-white group-hover:text-black  ml-4 md:ml-8 cursor-pointer transition-all duration-500
         "
             />
           </div>
 
-          <div className="w-44">
+          <div className="w-44 mx-auto">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               id="body_1"
@@ -52,9 +52,9 @@ function Header() {
               </g>
             </svg>
           </div>
-          <div>
+          <div className="absolute right-3 md:relative">
             <PersonOutlineIcon
-              className="text-white group-hover:text-black mr-8 cursor-pointer transition-all duration-500
+              className="text-white group-hover:text-black mr-4 md:mr-8 cursor-pointer transition-all duration-500
         "
             />
             <CardGiftcardIcon
