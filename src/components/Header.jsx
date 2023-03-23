@@ -19,7 +19,7 @@ function Header() {
     
   return (
   
-      <div className=" group flex flex-col ">
+      <div className=" group flex flex-col absolute top-0">
         <div
           className=" flex justify-between group-hover:bg-white transition-colors duration-500
       w-screen h-28  relative top-0 z-10 md:p-10 pt-5 "

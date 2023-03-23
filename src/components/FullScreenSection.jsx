@@ -26,21 +26,23 @@ function FullScreenSection({ title, image, subHeader }) {
   const transform = offset.interpolate((o) => `translateY(-${o}px)`);
 
   return (
+    <div className="snap-y snap-proximity">
     <animated.section
       ref={ref}
-      className="h-screen w-full flex flex-col justify-center items-center"
+      className="h-screen w-full flex flex-col justify-center items-center snap-center"
       style={{
         backgroundImage: `url(${image})`,
         backgroundSize: "cover",
         transform,
       }}
     >
-      <div className="cursor-pointer group text-center ">
+      <div className="cursor-pointer group text-center  ">
       <SectionHeader >{title} </SectionHeader >
       <p className="text-md font-thin text-white group-hover:underline group-hover:text-lg transition-all duration-500">{subHeader}</p>
       </div>
 
     </animated.section>
+    </div>
   );
 }
 

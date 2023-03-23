@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div className='w-screen relative z-10 bg-zinc-200'>
+    <div className='w-screen absolute bottom-0 z-10 bg-zinc-200'>
       <svg
               xmlns="http://www.w3.org/2000/svg"
               id="body_1"
